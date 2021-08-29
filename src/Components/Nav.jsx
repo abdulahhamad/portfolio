@@ -9,17 +9,15 @@ function Nav() {
 
 Array.prototype.forEach.call(tabs, function (tab) {
   tab.addEventListener("click", setActiveClass);
-  
-  function setActiveClass(evt) {
+});
+
+function setActiveClass(evt) {
   Array.prototype.forEach.call(tabs, function (tab) {
     tab.classList.remove("active");
   });
 
   evt.currentTarget.classList.add("active");
 }
-});
-
-
   return (
     <div className="row justify-content-center">
       <nav className="col-11">
