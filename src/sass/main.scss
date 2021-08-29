@@ -1,0 +1,20 @@
+$base-color: #0c0e18;
+$color-2: #E8EAEA ;
+$coler-3: #c4c4c4 ;
+$bold: 600 ;
+$black:700 ;
+//font 
+@import url('https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap');
+*{
+    font-family: Montserrat;
+    color: $coler-3;
+}
+body{
+    background: $base-color;
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    color: $color-2;
+}
