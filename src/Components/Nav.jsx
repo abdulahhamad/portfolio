@@ -18,6 +18,8 @@ function setActiveClass(evt) {
 
   evt.currentTarget.classList.add("active");
 }
+
+
   return (
     <div className="row justify-content-center">
       <nav className="col-11">
@@ -75,8 +77,16 @@ function setActiveClass(evt) {
               Protfolio
             </Link>
           </li>
-          <li class="slider" role="presentation" />
+          <li className="slider" role="presentation" />
         </ul>
+        <ol>
+          <li>
+            <button>Download CV</button>
+          </li>
+          <li>
+            <button>Contact me</button>
+          </li>
+        </ol>
       </nav>
     </div>
   );

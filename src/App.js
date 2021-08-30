@@ -10,11 +10,14 @@ import Plans from "./Components/Plans";
 import Services from "./Components/Services";
 import Works from "./Components/Works";
 import "./sass/main.css";
+import SosyalBar from "./Components/SosyalBar";
+
 
 function App() {
   return (
     <Router>
       <Nav />
+      <SosyalBar />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/About" component={About} />
