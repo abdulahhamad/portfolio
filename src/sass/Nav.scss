@@ -37,7 +37,7 @@ nav{
     width: 54px;
     height: 4px;
     border-radius: 15px;
-    background-color: $color-3;
+    background-color: $color-2;
     transition: left .25s;
 }
 .description_tab:first-child.active ~ .slider {
@@ -59,4 +59,43 @@ nav{
 .description_tab:nth-child(5).active ~ .slider {
     left: 450px !important;
     width: 75px;
+}
+ol{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    li{
+        margin: 2%;
+    }
+    li:first-child{
+        button{
+            background-color: $base-color;
+            border: solid 1px;
+            border-radius: 25px;
+            padding:5px  10px  ;
+            &:hover{
+                transition: 0.5ms;
+                background-color: $color-2;
+                border:solid 1px $base-color;
+                color: $base-color;
+            }
+        }
+    }
+    li:nth-child(2){
+        button{
+            background-color: $color-2;
+            color: $base-color;
+            border:solid 1px;
+            border: solid 1px;
+            border-radius: 25px;
+            padding:5px 10px;
+            &:hover{
+                transition: 0.5ms;
+                background-color: $base-color;
+                border:solid 1px $color-2;
+                color: $color-2;
+            }
+        }
+    }
 }
