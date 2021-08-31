@@ -10,6 +10,9 @@ $black:700 ;
     font-family: Montserrat;
     color: $coler-3;
 }
+*, ::after, ::before {
+    box-sizing: content-box;
+}
 body{
     background: $base-color;
     margin: 0;

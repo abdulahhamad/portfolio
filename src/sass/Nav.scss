@@ -3,6 +3,8 @@ $color-2: #E8EAEA ;
 $coler-3: #c4c4c4 ;
 $bold: 600 ;
 $black:700 ;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 nav{
     margin-top: 30px;
     display: flex;
@@ -22,6 +24,10 @@ nav{
                 }
             }
         }
+        @media (max-width: $desktop-width) {
+            display: none;
+            
+        }
     }
 }
 .avatar{
@@ -29,6 +35,11 @@ nav{
     width: 50px;
     height: 50px;
     object-fit: cover;
+    @media (max-width: $desktop-width) {
+        width: 150px;
+        height: 150px;
+        
+    }
 }
 .slider {
     position: absolute;
@@ -59,11 +70,6 @@ nav{
 .description_tab:nth-child(5).active ~ .slider {
     left: 453px !important;
     width: 70px;
-}
-.isActive{
-    
-    border-bottom: solid 4px;
-    border-width: 10px;
 }
 ol{
     list-style: none;
@@ -103,4 +109,9 @@ ol{
             }
         }
     }
+    @media (max-width: $desktop-width) {
+        display: none;
+        
+    }
+    
 }

@@ -1,15 +1,31 @@
+
+$base-color: #0c0e18;
+$color-2: #E8EAEA ;
+$coler-3: #c4c4c4 ;
+$bold: 600 ;
+$black:700 ;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+
 .wrapper {
     display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translatey(-50%);
+    
 }
 
 .wrapper .icon {
     position: relative;
     background-color: #ffffff;
     border-radius: 50%;
-    padding: 15px;
+    // padding: 15px;
     margin: 10px;
-    width: 50px;
-    height: 50px;
+    width: 5vh;
+    height: 5vh;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -18,12 +34,13 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
 }
 
 .wrapper .tooltip {
     position: absolute;
     top: 0;
-    font-size: 14px;
+    font-size: 1.6vh;
     background-color: #ffffff;
     color: #ffffff;
     padding: 5px 8px;
@@ -51,6 +68,21 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+}
+.icon span{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+.icon span svg {
+    fill:$base-color;
+        width: 70%;
+        height: 80%;
+        margin-top: 0.5vh;
+    
+}
+.wrapper .icon:hover span svg{
+    fill:$color-2;
 }
 
 .wrapper .icon:hover span,
@@ -91,4 +123,16 @@
 .wrapper .youtube:hover .tooltip::before {
     background-color: #de463b;
     color: #ffffff;
+}
+@media (max-width: $desktop-width) {
+    .wrapper{
+        display: inline-flex;
+        flex-direction: row;
+        position: absolute;
+        top: auto;
+        left: 50px;
+        width: 100%;
+        justify-content: center;
+        bottom: -50px;
+    }
 }

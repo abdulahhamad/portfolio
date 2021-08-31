@@ -11,13 +11,14 @@ import Services from "./Components/Services";
 import Works from "./Components/Works";
 import "./sass/main.css";
 import SosyalBar from "./Components/SosyalBar";
+import NavMb from "./Components/NavMb";
 
 
 function App() {
   return (
     <Router>
       <Nav />
-      <SosyalBar />
+      
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/About" component={About} />
@@ -29,6 +30,8 @@ function App() {
         <Route path="/Services" component={Services} />
         <Route path="/Works" component={Works} />
       </Switch>
+      <SosyalBar />
+      <NavMb className=" d-lg-none" />
     </Router>
   );
 }
