@@ -67,8 +67,13 @@ nav ul li a :hover {
 }
 
 .description_tab:nth-child(5).active ~ .slider {
-  left: 450px !important;
-  width: 75px;
+  left: 453px !important;
+  width: 70px;
+}
+
+.isActive {
+  border-bottom: solid 4px;
+  border-width: 10px;
 }
 
 ol {
@@ -117,4 +122,4 @@ ol li:nth-child(2) button:hover {
   border: solid 1px #E8EAEA;
   color: #E8EAEA;
 }
-/*# sourceMappingURL=Nav.css.map */
+/*# sourceMappingURL=nav.css.map */

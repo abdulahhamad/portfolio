@@ -1,24 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import "../sass/Nav.css";
 import avatar from "../imeg/avatar.jpg";
 
-
 function Nav() {
-  var tabs = document.getElementsByClassName("Tab");
-
-Array.prototype.forEach.call(tabs, function (tab) {
-  tab.addEventListener("click", setActiveClass);
-});
-
-function setActiveClass(evt) {
-  Array.prototype.forEach.call(tabs, function (tab) {
-    tab.classList.remove("active");
-  });
-
-  evt.currentTarget.classList.add("active");
-}
-
+  
 
   return (
     <div className="row justify-content-center">
@@ -32,9 +24,28 @@ function setActiveClass(evt) {
             id="tab-title-description"
             role="tab"
             aria-controls="tab-description"
-            
           >
-            <Link to="/about" className="nav-link">About</Link>
+            <NavLink
+              isActive={(match, location) => {
+                var tabs = document.getElementsByClassName("Tab");
+
+                Array.prototype.forEach.call(tabs, function (tab) {
+                  tab.addEventListener("click", setActiveClass);
+                });
+
+                function setActiveClass(evt) {
+                  Array.prototype.forEach.call(tabs, function (tab) {
+                    tab.classList.remove("active");
+                  });
+
+                  evt.currentTarget.classList.add("active");
+                 }
+              }}
+              to="/about"
+              className="nav-link"
+            >
+              About
+            </NavLink>
           </li>
 
           <li
@@ -43,7 +54,9 @@ function setActiveClass(evt) {
             role="tab"
             aria-controls="tab-reviews"
           >
-            <Link to="/Experience" className="nav-link">Experience</Link>
+            <Link to="/Experience" className="nav-link">
+              Experience
+            </Link>
           </li>
 
           <li
@@ -77,16 +90,8 @@ function setActiveClass(evt) {
               Protfolio
             </Link>
           </li>
-          <li className="slider" role="presentation" />
+          <li class="slider" role="presentation" />
         </ul>
-        <ol>
-          <li>
-            <button>Download CV</button>
-          </li>
-          <li>
-            <button>Contact me</button>
-          </li>
-        </ol>
       </nav>
     </div>
   );
