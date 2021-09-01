@@ -8,10 +8,7 @@ import {
     NavLink,
   } from "react-router-dom";
 
-import { GoHome, GoInfo } from "react-icons/go";
-import { GrUserExpert } from "react-icons/gr";
-import { CgProfile } from "react-icons/cg";
-import { IoSchool } from "react-icons/io5";
+
 
 
 
@@ -29,11 +26,13 @@ function NavMb(){
   <ul className="more-button-list">
     <li className="more-button-list-item">
       <NavLink to="/about">
+
       <span>about</span>
       </NavLink>
     </li>
     <li className="more-button-list-item">
     <NavLink to="/Experience">
+    
       <span>Experience</span>
       </NavLink>
     </li>

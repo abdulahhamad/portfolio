@@ -10,6 +10,7 @@ import "../sass/Nav.css";
 import avatar from "./imeg/avatar.jpg";
 
 function Nav() {
+  
   return (
     <div className="row mb-5 justify-content-center">
       <nav className="col-11">
