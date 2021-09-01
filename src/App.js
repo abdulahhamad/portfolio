@@ -31,7 +31,7 @@ function App() {
         <Route path="/Works" component={Works} />
       </Switch>
       <SosyalBar />
-      <NavMb className=" d-lg-none" />
+      <NavMb />
     </Router>
   );
 }
