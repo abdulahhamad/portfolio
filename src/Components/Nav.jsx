@@ -10,146 +10,71 @@ import "../sass/Nav.css";
 import avatar from "./imeg/avatar.jpg";
 
 function Nav() {
+  const [ToggleState, setToggleState] = useState(false);
+  const [ToggleState1, setToggleState1] = useState(false);
+  const [ToggleState2, setToggleState2] = useState(false);
+  const [ToggleState3, setToggleState3] = useState(false);
+  const [ToggleState4, setToggleState4] = useState(false);
   return (
     <div className="row mb-5 justify-content-center">
       <nav className="col-11">
         <Link to="/">
           <img className="avatar" src={avatar} alt={avatar} />
         </Link>
-        <ul className="Tabs">
+        <ul>
           <li
-            className="description_tab active Tab"
-            id="tab-title-description"
-            role="tab"
-            aria-controls="tab-description"
+            className={`description_tab active Tab ${ToggleState && " active"}`}
           >
             <NavLink
-              isActive={(match, location) => {
-                var tabs = document.getElementsByClassName("Tab");
-
-                Array.prototype.forEach.call(tabs, function (tab) {
-                  tab.addEventListener("click", setActiveClass);
-                });
-
-                function setActiveClass(evt) {
-                  Array.prototype.forEach.call(tabs, function (tab) {
-                    tab.classList.remove("active");
-                  });
-
-                  evt.currentTarget.classList.add("active");
-                 }
-              }}
+              onClick={()=> setToggleState(!ToggleState)}
+              className={`nav-link`}
               to="/about"
-              className="nav-link"
             >
               About
             </NavLink>
           </li>
 
           <li
-            className="description_tab Tab"
-            id="tab-title-reviews"
-            role="tab"
-            aria-controls="tab-reviews"
+            className={`description_tab Tab ${ToggleState1 && " active1"}`}
           >
             <NavLink
-            isActive={(match, location) => {
-                var tabs = document.getElementsByClassName("Tab");
-
-                Array.prototype.forEach.call(tabs, function (tab) {
-                  tab.addEventListener("click", setActiveClass);
-                });
-
-                function setActiveClass(evt) {
-                  Array.prototype.forEach.call(tabs, function (tab) {
-                    tab.classList.remove("active");
-                  });
-
-                  evt.currentTarget.classList.add("active");
-                 }
-              }}
-             to="/Experience" className="nav-link">
+            onClick={()=> setToggleState1(!ToggleState1)}
+            className={`nav-link `}
+             to="/Experience">
               Experience
             </NavLink>
           </li>
 
           <li
-            className="description_tab Tab"
-            id="tab-title-reviews"
-            role="tab"
-            aria-controls="tab-reviews"
+            className={`description_tab Tab ${ToggleState2 && " active2"}`}
           >
             <NavLink
-            isActive={(match, location) => {
-                var tabs = document.getElementsByClassName("Tab");
-
-                Array.prototype.forEach.call(tabs, function (tab) {
-                  tab.addEventListener("click", setActiveClass);
-                });
-
-                function setActiveClass(evt) {
-                  Array.prototype.forEach.call(tabs, function (tab) {
-                    tab.classList.remove("active");
-                  });
-
-                  evt.currentTarget.classList.add("active");
-                 }
-              }}
-             className="nav-link" to="/Education">
+            onClick={()=> setToggleState2(!ToggleState2)}
+              className={`nav-link`}
+             to="/Education">
               Education
             </NavLink>
           </li>
 
           <li
-            className="description_tab Tab"
-            id="tab-title-reviews"
-            role="tab"
-            aria-controls="tab-reviews"
+            className={`description_tab Tab ${ToggleState3 && " active3"}`}
           >
             <NavLink
-            isActive={(match, location) => {
-                var tabs = document.getElementsByClassName("Tab");
-
-                Array.prototype.forEach.call(tabs, function (tab) {
-                  tab.addEventListener("click", setActiveClass);
-                });
-
-                function setActiveClass(evt) {
-                  Array.prototype.forEach.call(tabs, function (tab) {
-                    tab.classList.remove("active");
-                  });
-
-                  evt.currentTarget.classList.add("active");
-                 }
-              }}
-             className="nav-link" to="/skilis">
+            onClick={()=> setToggleState3(!ToggleState3)}
+              className={`nav-link ${ToggleState && " active"}`}
+               to="/skilis">
               skilis
             </NavLink>
           </li>
           <li
-            className="description_tab Tab"
-            id="tab-title-reviews"
-            role="tab"
-            aria-controls="tab-reviews"
+            className={`description_tab Tab ${ToggleState4 && " active4"}`}
+            
           >
             <NavLink
-                        isActive={(match, location) => {
-                var tabs = document.getElementsByClassName("Tab");
-
-                Array.prototype.forEach.call(tabs, function (tab) {
-                  tab.addEventListener("click", setActiveClass);
-                });
-
-                function setActiveClass(evt) {
-                  Array.prototype.forEach.call(tabs, function (tab) {
-                    tab.classList.remove("active");
-                  });
-
-                  evt.currentTarget.classList.add("active");
-                 }
-              }}
-
-             className="nav-link" to="/Protfolio">
+            onClick={()=> setToggleState4(!ToggleState4)}
+              className={`nav-link`}
+            to="/Protfolio"
+            >
               Protfolio
             </NavLink>
           </li>

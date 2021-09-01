@@ -19,4 +19,73 @@ body {
 a:hover {
   color: #E8EAEA;
 }
+
+.welcom {
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(12, 14, 24, 0.3);
+  margin: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.welcom h1 {
+  color: #E8EAEA;
+}
+
+.welcom p {
+  color: #fff;
+}
+
+.welcom:nth-child(1) {
+  position: relative;
+  left: 11%;
+  z-index: -10;
+}
+
+.welcom:nth-child(2) {
+  background-image: url(../Components/imeg/avatar.jpg);
+  background-position: center;
+  background-size: 100%;
+  z-index: -10;
+}
+
+.welcom:nth-child(3) {
+  position: absolute;
+  bottom: -250px;
+  left: -250px;
+  background-color: #c4c4c4;
+  opacity: .3;
+  z-index: -1;
+}
+
+.welcom-cont {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 1024px) {
+  .welcom-cont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=main.css.map */
