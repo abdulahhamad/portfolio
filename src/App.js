@@ -38,8 +38,8 @@ function App() {
 
 function Home() {
   return (
-    <div className="row">
-    <div className="container w-auto d-flex welcom-cont">
+    <div className="row justify-content-center cont">
+    <div className="container d-flex welcom-cont">
       <div className="welcom">
       <h1>Welcom, I'm<br />
       Abdullah Alhammad

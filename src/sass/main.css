@@ -14,7 +14,6 @@ body {
   background: #0c0e18;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 a:hover {
@@ -28,13 +27,9 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(12, 14, 24, 0.3);
   margin: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -52,9 +47,9 @@ a:hover {
 
 .welcom:nth-child(1) {
   position: relative;
-  left: 11%;
-  background-color: rgba(25, 26, 57, 0.3);
+  background-color: none;
   font-size: 15px;
+  border-radius: 0;
 }
 
 .welcom:nth-child(2) {
@@ -77,6 +72,7 @@ a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -85,40 +81,31 @@ a:hover {
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    max-width: 100% !important;
   }
-  .welcom:nth-child(1) {
-    height: 1000px;
-    width: 1000px;
-    position: relative;
-    top: 30%;
-    left: -10%;
-    background-color: rgba(25, 26, 57, 0.3);
-    font-size: 28px;
-    overflow: auto;
+  .cont {
+    width: 100%;
+    margin: 0;
   }
-  .welcom:nth-child(2) {
-    background-position: center;
-    background-size: 100%;
-    z-index: -10;
-    left: 10%;
-    position: relative;
-    top: -55%;
-    height: 700px;
-    width: 700px;
+  .welcom {
+    width: 100%;
+    font-size: 2rem !important;
   }
   .welcom h1 {
-    color: #E8EAEA;
-    font-size: 4.5rem;
+    font-size: 3rem !important;
   }
-  .welcom p {
-    color: #fff;
-    font-size: 28px;
-  }
-  body {
-    overflow: auto;
+  .welcom:nth-child(2) {
+    position: relative;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    float: right;
+    top: 0%;
+    width: 550px;
+    height: 550px;
+    border: 14px solid;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,97 @@
+body {
+  max-height: 100vh;
+  max-width: 100%;
+  scale: none;
+}
+
+.poll {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  position: fixed;
+  top: -470px;
+  left: -250px;
+  background-color: #c4c4c4;
+  opacity: .3;
+  z-index: -1;
+}
+
+.poll2 {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -250px;
+  right: -250px;
+  background-color: #c4c4c4;
+  opacity: .3;
+  z-index: -1;
+}
+
+.AboutMe-cont {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+.myOl {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 35%;
+}
+
+.myOl li {
+  width: 200px;
+  height: auto;
+  border: 1px solid;
+  border-radius: 30px;
+  padding: 7px 15px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.myOl li:nth-child(1), .myOl li:nth-child(3) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media (max-width: 1024px) {
+  .AboutMe-cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 10%;
+  }
+  .AboutMe-cont > * {
+    width: 100%;
+  }
+  .AboutMe-cont div h1 {
+    font-size: 4rem;
+  }
+  .AboutMe-cont div p {
+    font-size: 2rem;
+  }
+  .AboutMe-cont ol li {
+    width: 400px;
+    padding: 10px;
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=About.css.map */

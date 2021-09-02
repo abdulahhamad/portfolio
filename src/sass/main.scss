@@ -19,7 +19,6 @@ body{
     background: $base-color;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 a:hover{
     color: $color-2;
@@ -29,9 +28,7 @@ a:hover{
     height: 550px;
     border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: rgba(12, 14, 24, 0.3);
     margin: 5px;
     flex-direction: column;
 }
@@ -45,9 +42,9 @@ a:hover{
 }
 .welcom:nth-child(1){
         position: relative;
-        left: 11%;
-        background-color: rgba(25, 26, 57, 0.3);
+        background-color:none;
         font-size: 15px;
+        border-radius: 0;
 }
 
 .welcom:nth-child(2){
@@ -66,43 +63,32 @@ a:hover{
 }
 .welcom-cont{
     justify-content: space-evenly;
+    width: 100%;
 }
 @media (max-width: $desktop-width) {
     .welcom-cont{
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        max-width: 100% !important;
     }
-    .welcom:nth-child(1) {
-        height: 1000px;
-        width: 1000px;
+    .cont{
+        width: 100%;
+        margin: 0;
+    }
+    .welcom{
+        width: 100%;
+        font-size: 2rem !important;
+        h1{
+            font-size: 3rem !important;
+        }
+    }
+    .welcom:nth-child(2){
         position: relative;
-        top: 30%;
-        left: -10%;
-        background-color: rgba(25, 26, 57, 0.3);
-        font-size: 28px;
-        overflow: auto;
+        align-self: flex-end;
+        float: right;
+        top: 0%;
+        width: 550px;
+        height: 550px;
+        border: 14px solid;
     }
-    .welcom:nth-child(2) {
-        background-position: center;
-        background-size: 100%;
-        z-index: -10;
-        left: 10%;
-        position: relative;
-        top: -55%;
-        height: 700px;
-        width: 700px;
-    }
-    
-    .welcom h1{
-        color: $color-2;
-        font-size: 4.5rem;
-    }
-    .welcom p{
-        color: #fff;
-        font-size: 28px;
-    }
-    body{
-        overflow: auto;
-    }
-    
 }
