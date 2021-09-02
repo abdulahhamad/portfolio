@@ -37,11 +37,11 @@ a:hover{
 }
 .welcom h1{
     color: $color-2;
-    font-size: 4.5rem;
+    
 }
 .welcom p{
     color: #fff;
-    font-size: 28px;
+    
 }
 .welcom:nth-child(1){
         position: relative;
@@ -93,6 +93,14 @@ a:hover{
         width: 700px;
     }
     
+    .welcom h1{
+        color: $color-2;
+        font-size: 4.5rem;
+    }
+    .welcom p{
+        color: #fff;
+        font-size: 28px;
+    }
     
     
 }

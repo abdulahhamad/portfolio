@@ -129,10 +129,14 @@ $desktop-width: 1024px;
         display: inline-flex;
         flex-direction: row;
         position: absolute;
-        top: auto;
+        top: 95%;
         left: 50px;
-        width: 100%;
+        width: 90%;
         justify-content: center;
-        bottom: -50px;
+        transform: none;
+        .icon{
+            width: 7vh;
+            height: 7vh;
+        }
     }
 }

@@ -44,12 +44,10 @@ a:hover {
 
 .welcom h1 {
   color: #E8EAEA;
-  font-size: 4.5rem;
 }
 
 .welcom p {
   color: #fff;
-  font-size: 28px;
 }
 
 .welcom:nth-child(1) {
@@ -110,6 +108,14 @@ a:hover {
     top: -55%;
     height: 700px;
     width: 700px;
+  }
+  .welcom h1 {
+    color: #E8EAEA;
+    font-size: 4.5rem;
+  }
+  .welcom p {
+    color: #fff;
+    font-size: 28px;
   }
 }
 /*# sourceMappingURL=main.css.map */

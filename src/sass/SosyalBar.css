@@ -145,13 +145,18 @@
         -ms-flex-direction: row;
             flex-direction: row;
     position: absolute;
-    top: auto;
+    top: 95%;
     left: 50px;
-    width: 100%;
+    width: 90%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    bottom: -50px;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .wrapper .icon {
+    width: 7vh;
+    height: 7vh;
   }
 }
 /*# sourceMappingURL=SosyalBar.css.map */
