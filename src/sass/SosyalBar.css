@@ -144,19 +144,28 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    position: absolute;
-    top: 95%;
-    left: 50px;
+    position: relative;
     width: 90%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-transform: none;
             transform: none;
+    margin: 0 0 35px 0;
   }
   .wrapper .icon {
     width: 7vh;
     height: 7vh;
+  }
+  .wrapper .icon:hover .tooltip {
+    top: -85px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .wrapper .tooltip {
+    padding: 5px 21px;
+    font-size: 2vh;
   }
 }
 /*# sourceMappingURL=SosyalBar.css.map */
