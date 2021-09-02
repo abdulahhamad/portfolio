@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
       <Nav />
-      
+      <NavMb />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/About" component={About} />
@@ -31,15 +31,28 @@ function App() {
         <Route path="/Works" component={Works} />
       </Switch>
       <SosyalBar />
-      <NavMb />
+      
     </Router>
   );
 }
 
 function Home() {
   return (
-    <div className="container">
-      <h1>Home</h1>
+    <div className="row">
+    <div className="container w-auto d-flex welcom-cont">
+      <div className="welcom">
+      <h1>Welcom, I'm<br />
+      Abdullah Alhammad
+      </h1>
+      <p>Creative Front-End Developer with 2 years of experience providing<br /> high-impact Solutions for different web systems.</p>
+      <p>Skilled in designing, developing and testing multiple<br /> web-based applications incorporating a range of technologies.</p>
+      <p>&nbsp;Aspiring to combine broad background<br /> with strong technical skills to excel as a Front-End Developer.</p>
+      </div>
+      <div className="welcom">
+      </div>
+      <div className="welcom">
+      </div>
+    </div>
     </div>
   );
 }
