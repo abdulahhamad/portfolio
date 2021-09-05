@@ -55,19 +55,19 @@ nav{
     
     left: 52px;
 }
-.description_tab:nth-child(2).active1 ~ .slider {
+.description_tab:nth-child(2).active ~ .slider {
     left: 138px !important;
     width: 90px;
 }
-.description_tab:nth-child(3).active2 ~ .slider {
+.description_tab:nth-child(3).active ~ .slider {
     left: 260px !important;
     width: 90px;
 }
-.description_tab:nth-child(4).active3 ~ .slider {
+.description_tab:nth-child(4).active ~ .slider {
     left: 379px !important;
     width: 44px;
 }
-.description_tab:nth-child(5).active4 ~ .slider {
+.description_tab:nth-child(5).active ~ .slider {
     left: 453px !important;
     width: 70px;
 }
