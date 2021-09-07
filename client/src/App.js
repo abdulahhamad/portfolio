@@ -12,9 +12,12 @@ import Works from "./Components/Works";
 import "./sass/main.css";
 import SosyalBar from "./Components/SosyalBar";
 import NavMb from "./Components/NavMb";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 
 function App() {
+
   return (
     <Router>
       <Nav />
@@ -37,17 +40,26 @@ function App() {
 }
 
 function Home() {
+  const [listOfPosts, setListOfPosts] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:3001/posts").then((response) => {
+      setListOfPosts(response.data);
+    });
+  }, []);
   return (
     <div className="row justify-content-center cont">
     <div className="container d-flex welcom-cont">
+    {listOfPosts.map((value, key) => {
+        return (
       <div className="welcom">
-      <h1>Welcom, I'm<br />
-      Abdullah Alhammad
+      <h1>{value.title}
       </h1>
-      <p>Creative Front-End Developer with 2 years of experience providing<br /> high-impact Solutions for different web systems.</p>
+      <p>{value.postText}</p>
       <p>Skilled in designing, developing and testing multiple<br /> web-based applications incorporating a range of technologies.</p>
       <p>&nbsp;Aspiring to combine broad background<br /> with strong technical skills to excel as a Front-End Developer.</p>
       </div>
+      );
+      })}
       <div className="welcom">
       </div>
       <div className="welcom">
